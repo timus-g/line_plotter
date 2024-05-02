@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotting WebUI</title>
+</head>
+<body>
+    <h1>Enter Slope and Intercept</h1>
+    <form action="/" method="get">
+        Slope: <input type="number" step="any" name="slope" value="{{ slope }}" required><br>
+        Intercept: <input type="number" step="any" name="intercept" value="{{ intercept }}" required><br>
+        <button type="submit">Plot</button>
+    </form>
+    <h1>Plot</h1>
+    <div id="plot">
+        {{ plot_html|safe }}
+    </div>
+</body>
+</html>
